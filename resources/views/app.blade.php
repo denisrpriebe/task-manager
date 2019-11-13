@@ -28,20 +28,9 @@
             <h1>Task Manager</h1>
         </div>
 
-        <hr/>
-
         <!-- Task manager application -->
-        <div class="row">
-
-            <div class="col-6 pl-5">
-                <h4>Features</h4>
-                <ul>
-                    <li>Add tasks to a list</li>
-                    <li>Remove tasks from a list</li>
-                    <li>Ability to mark tasks as complete</li>
-                </ul>
-            </div>
-
+        <div class="row justify-content-center">
+            <task-manager></task-manager>
         </div>
 
     </div>
