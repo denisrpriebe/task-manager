@@ -22,7 +22,7 @@
                 required: true
             }
 
-        }
+        },
 
     }
 

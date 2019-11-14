@@ -48,6 +48,14 @@
             }
         },
 
+        watch: {
+
+            task(newTask) {
+                this.todo = newTask
+            }
+
+        },
+
         methods: {
 
             toggleTask() {
