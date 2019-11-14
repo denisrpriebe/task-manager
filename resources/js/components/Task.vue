@@ -6,7 +6,8 @@
                 <!-- Task checkbox -->
                 <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" :id="`task-${todo.id}`"
-                           v-model="todo.complete">
+                           v-model="todo.complete"
+                           @change="toggleTask">
                     <label class="custom-control-label" :for="`task-${todo.id}`"></label>
                 </div>
 
@@ -21,7 +22,7 @@
 
         <!-- Task actions -->
         <div>
-            <button type="button" class="btn btn-link text-primary btn-sm pl-0">Update</button>
+            <button type="button" class="btn btn-link text-primary btn-sm pl-0">Edit</button>
             <button type="button" class="btn btn-link text-danger btn-sm" @click="deleteTask">Delete</button>
         </div>
 
@@ -49,16 +50,16 @@
 
         methods: {
 
-            toggleTaskCompletion() {
+            toggleTask() {
 
-                //
+                console.log(`Task #${this.todo.id} toggled.`)
 
                 this.$emit('updated')
             },
 
             deleteTask() {
 
-                //
+                console.log(`Task #${this.todo.id} deleted.`)
 
                 this.$emit('updated')
             }

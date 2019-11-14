@@ -1,8 +1,6 @@
 <template>
     <div class="col-md-8">
 
-        <hr>
-
         <!-- Task input -->
         <task-input @taskAdded="loadTasks"></task-input>
 
@@ -25,9 +23,7 @@
         },
 
         created() {
-
             this.loadTasks()
-
         },
 
         methods: {
