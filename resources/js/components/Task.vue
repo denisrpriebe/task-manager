@@ -66,10 +66,8 @@
             },
 
             deleteTask() {
-
-                console.log(`Task #${this.todo.id} deleted.`)
-
-                this.$emit('updated')
+                axios.delete(`/api/tasks/${this.todo.id}`)
+                    .then(() => this.$emit('updated'))
             }
 
         }

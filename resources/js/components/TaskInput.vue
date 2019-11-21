@@ -19,9 +19,11 @@
         methods: {
 
             addTask() {
-                //
-
-                this.$emit('taskAdded')
+                axios.post('/api/tasks', {text: this.task})
+                    .then(() => {
+                        this.task = ''
+                        this.$emit('taskAdded')
+                    })
             }
 
         }

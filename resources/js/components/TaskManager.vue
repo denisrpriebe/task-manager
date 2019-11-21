@@ -33,23 +33,8 @@
             },
 
             loadTasks() {
-                this.tasks = [
-                    {
-                        id: 1,
-                        text: 'Complete a tech audit',
-                        complete: false
-                    },
-                    {
-                        id: 2,
-                        text: 'Drink more light beer',
-                        complete: true
-                    },
-                    {
-                        id: 3,
-                        text: 'Go snowboarding this year',
-                        complete: false
-                    },
-                ]
+                axios.get('/api/tasks')
+                    .then(response => this.tasks = response.data)
             }
 
         }

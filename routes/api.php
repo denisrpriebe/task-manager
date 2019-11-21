@@ -13,3 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('tasks', 'TaskController@index');
+
+Route::post('tasks', 'TaskController@store');
+
+Route::delete('tasks/{task}', 'TaskController@destroy');
