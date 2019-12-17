@@ -11,4 +11,8 @@
 |
 */
 
-Route::get('/', 'AppController');
+Route::get('vue', 'AppController@vue');
+
+Route::get('react', 'AppController@react');
+
+Route::get('shop/{view?}', 'AppController@shop')->where('view', '(.*)');
