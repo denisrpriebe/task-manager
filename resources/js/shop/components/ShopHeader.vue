@@ -5,8 +5,9 @@
             <div class="text-center text-muted">(Headless Shopify Example)</div>
             <div class="d-flex justify-content-between mt-4">
                 <div>
-                    <router-link to="/" exact class="mr-3">All BMWs</router-link>
-                    <router-link to="/m-series" exact>M Series</router-link>
+                    <router-link to="/" exact>Featured</router-link>
+                    <router-link to="/m-series" exact class="mx-3">M Series</router-link>
+                    <router-link to="/x-series" exact>X Series</router-link>
                 </div>
                 <div>
                     <a class="text-success mr-3" href="#">My Account</a>

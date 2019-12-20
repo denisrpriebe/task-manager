@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 
-export const frontPageProducts = gql(`query {
-    collectionByHandle(handle: "frontpage") {
+export const XSeriesProductQuery = gql(`query {
+    collectionByHandle(handle: "x-series") {
         descriptionHtml
         products(first: 10) {
             edges {

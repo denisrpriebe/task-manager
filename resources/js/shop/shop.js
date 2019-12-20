@@ -51,15 +51,17 @@ import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
 import VueRouter from 'vue-router'
 
+/**
+ * Our GraphQL Apollo client and configuration related data.
+ */
 const apolloClient = new ApolloClient({
     uri: 'https://denis-sandbox-store.myshopify.com/api/2019-07/graphql.json',
     headers: {'X-Shopify-Storefront-Access-Token': '4d9adca137d9b053d67fd5305bbc3e5a'}
 })
 
-const apolloProvider = new VueApollo({
-    defaultClient: apolloClient,
-})
-
+/**
+ * Any SPA routes defined by our application.
+ */
 const routes = [
     {
         path: '/',
@@ -70,6 +72,10 @@ const routes = [
         component: require('./pages/MSeries').default,
     },
     {
+        path: '/x-series',
+        component: require('./pages/XSeries').default,
+    },
+    {
         path: '/about',
         component: require('./pages/About').default,
     },
@@ -78,6 +84,10 @@ const routes = [
         component: require('./pages/Product').default,
     }
 ]
+
+const apolloProvider = new VueApollo({
+    defaultClient: apolloClient,
+})
 
 const router = new VueRouter({
     mode: 'history',

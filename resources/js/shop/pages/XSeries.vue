@@ -32,7 +32,7 @@
 
 <script>
 
-    import {featuredProducts} from '../queries/FeaturedProductsQuery'
+    import {XSeriesProductQuery} from '../queries/XSeriesProductsQuery'
 
     export default {
 
@@ -44,7 +44,7 @@
 
         apollo: {
 
-            collectionByHandle: featuredProducts
+            collectionByHandle: XSeriesProductQuery
 
         },
 

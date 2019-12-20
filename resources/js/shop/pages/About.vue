@@ -3,10 +3,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
 
-                <!-- About content here -->
-                <h3 class="text-center">{{ pageByHandle.title }}</h3>
+                <!-- Page title -->
+                <h3 class="text-center mt-3">{{ pageByHandle.title }}</h3>
 
-                <div v-html="pageByHandle.body"></div>
+                <!-- Page body -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-8" v-html="pageByHandle.body"></div>
+                </div>
 
             </div>
         </div>
